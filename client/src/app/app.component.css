@@ -1,0 +1,44 @@
+#cabecalho{
+    height: 100px;
+    background:#0099ff;
+}
+#conversa{
+    height: 420px;
+    width: 560px; 
+    margin: 20px auto 10px auto;
+}
+body{
+    overflow-x: hidden;
+    background:#ffffff ;
+}
+.centralizada{
+    width: 600px;
+    height: auto;
+    margin: 35px auto 0px auto;
+    background: #e6e6e6;
+}
+.formulario{
+    border-radius: 50px;
+    margin-top: 5px;
+    padding: 6px;
+}
+#usuario{
+    width: 300px;
+    height: auto;
+    background: #ffffff;
+    border-radius:50px;
+    float: left;
+    margin: 10px 0px 10px 10px;
+    padding: 10px;
+    font-size: 16px
+}
+#bot{
+    width: 300px;
+    height: auto;
+    background: #a1d1e4;
+    border-radius:50px;
+    float: right;
+    margin: 10px 0px 10px 10px;
+    padding: 10px;
+    font-size: 16px
+}
