@@ -25,13 +25,13 @@ export class AppComponent {
     private _fb: FormBuilder
   ) {
     this.authForm = this._fb.group({
-      'message': ['', [Validators.minLength(3)]]
+      'message': ['', [Validators.required, Validators.minLength(2)]]
     });
   }
   botMessage(value: string) {
     return this.searchMessage(value).pipe(
       map(res => {
-        console.log(res);
+        // console.log(res);
         this.messagesList.push(res['data']);
       }),
       catchError(err => {
@@ -48,10 +48,11 @@ export class AppComponent {
   }
   onSubmit(value) {
     this.submitted = true;
+    const message = value['message'];
     if (this.authForm.invalid) {
       return;
     }
-    const message = value['message'];
     this.botMessage(message).subscribe();
+    this.authForm.reset();
   }
 }
