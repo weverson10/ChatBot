@@ -13,6 +13,13 @@
                 height: 100px;
                 background:#0099ff;
             }
+
+            #conversa{
+                height: 420px;
+                width: 560px;
+                border: 1px solid red; /*Foi só pra demonstrar a área da conversa, depois apaga*/
+                margin: 20px auto 0px auto;
+            }
             body{
                 overflow-x: hidden;
                 background:#ffffff ;
@@ -22,29 +29,34 @@
                 width: 600px;
                 height: 500px;
                 margin: 35px auto 0px auto;
-                background: #d9d9d9;
+                background: #e6e6e6;
 
             }
 
             .formulario{
                 border-radius: 50px;
-                margin-top: 460px;
-                padding: 0px 20px 0px 20px;
+                margin-top: 5px;
             }
+
+
 
         </style>
     </head>
 
     <body>
 
-        <header class="row" id="cabecalho">
+        <header class="row" id="cabecalho">  <!--Cabeçalho -->
                 <div class="container">
                     <h1 style="text-align: center;">ChatBot</h1>
                 </div>
 
         </header>
 
-        <div class="row centralizada">            
+        <div class="row centralizada">  <!-- Área do Chat -->
+            
+            <div id="conversa">
+
+            </div>
                
             <input type="text" placeholder="Digite aqui..." class=" form-control formulario">
 
