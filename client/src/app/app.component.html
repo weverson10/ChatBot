@@ -1,0 +1,27 @@
+<header class="row" id="cabecalho">  <!--Cabeçalho -->
+  <div class="container">
+      <h1 style="text-align: center;">ChatBot</h1>
+  </div>
+</header>
+
+<div class="row centralizada">
+
+<div id="conversa">
+</div>
+
+<div *ngFor="let item of messagesList">
+  <span>USER: {{item.user}}</span>
+  <br />
+  <span>BOT: {{item.bot}}</span>
+</div>
+
+<form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)">
+  <input formControlName="message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }" type="text" placeholder="Digite aqui...">
+  <div *ngIf="submitted && f.message.errors">
+      <div *ngIf="f.message.errors.required">Não pode enviar nada vazio</div>
+      <div *ngIf="f.message.errors.minlength">A frase está muito curta</div>
+  </div>
+  <button type="submit">Enviar</button>
+</form>
+
+</div>
