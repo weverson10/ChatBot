@@ -25,7 +25,7 @@ export class AppComponent {
     private _fb: FormBuilder
   ) {
     this.authForm = this._fb.group({
-      'message': ['', [Validators.required, Validators.minLength(3)]]
+      'message': ['', [Validators.minLength(3)]]
     });
   }
   botMessage(value: string) {
