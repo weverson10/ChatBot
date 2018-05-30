@@ -12,10 +12,10 @@
     </div>
   </div>
   <form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)" (keyup.enter)="onSubmit(authForm.value)">
-    <input formControlName="message" class="formulario col-md-10" [ngClass]="{ 'is-invalid': submitted && f.message.errors }" type="text" placeholder="Digite aqui...">
     <div *ngIf="submitted && f.message.errors">
         <div *ngIf="f.message.errors.minlength">A frase está muito curta</div>
     </div>
+    <input formControlName="message" class="formulario col-md-10" [ngClass]="{ 'is-invalid': submitted && f.message.errors }" type="text" placeholder="Digite aqui...">
     <button type="submit" class="btn btn-info col-md-2" style="margin-top:6px ;">Enviar</button>
   </form>
 </div>
